@@ -1,0 +1,212 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Ubuntu&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+.wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(40deg, rgba(34,210,196,1) 0%, rgba(56,104,118,1) 40%, rgba(134,105,42,1) 61%, rgba(253,187,45,1) 93%);
+    transition: background-color 5s ease;
+}
+
+.navbar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.32);
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar h2{
+    padding: 5px 50px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.navbar h3{
+    padding-top: 40px;
+    padding-right: 50px;
+    color: rgb(173, 222, 202);
+    font-weight: 300;
+}
+
+.card-container{
+    position: relative;
+    top: 30px;
+    width: 400px;
+    height: 100px;
+    border-radius: 16px;
+    box-shadow: rgba(248, 248, 248, 0.336) 5px 10px 29px 20px;
+    background-color: rgba(212, 235, 216, 0.212);
+    backdrop-filter: blur(60px);
+    border: 2px solid rgba(255, 255, 255, 0.765);
+    padding: 20px;
+    color: #fff;
+    transition: height 0.6s ease;
+}
+
+
+.search-box{
+    width: 100%;
+    height: 55px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.422);
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 48px 0 42px;
+}
+
+.search-box input::placeholder{
+    color: #fff;
+    text-transform: capitalize;
+
+}
+
+.search-box i{
+    position: absolute;
+    left: 10px;
+    font-size: 28px;
+}
+
+.search-box button{
+    position: absolute;
+    right: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 28px;
+    cursor: pointer;
+    width: 40px;
+    padding: 0 40px 0 5px;
+    color: #fff;
+}
+
+.weather-box{
+    text-align: center;
+    margin: 40px 0;
+}
+
+.weather-box,
+.weather-details,
+.not-found {
+    visibility: hidden;
+}
+
+.weather-box.active,
+.weather-details.active,
+.not-found.active {
+    visibility: visible;
+}
+
+.weather-box img{
+    width: 60%;
+}
+
+.weather-box .temperature{
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 600;
+    margin: 20px 0 6px -10px;
+}
+
+.weather-box .temperature span{
+    position: absolute;
+    font-size: 24px;
+    margin-left: 6px;
+    font-weight: 1000;
+}
+
+.weather-box .description{
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weather-details{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+}
+
+.weather-details .humidity,
+.weather-details .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.weather-details .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.weather-details i{
+    font-size: 56px;
+    margin-right: 10px;
+}
+
+.weather-details span{
+    font-size: 22px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.weather-details p{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.not-found .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 110px;
+    width: 100%;
+    text-align: center;
+}
+
+.not-found img{
+    width: 60%;
+}
+
+.not-found .box p{
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
